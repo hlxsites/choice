@@ -16,6 +16,9 @@ import {
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 window.hlx.RUM_GENERATION = 'project-1'; // add your RUM generation information here
 
+const SUPPORTED_LANGUAGES = ['en-us', 'fr-us', 'en-ca', 'de-de'];
+const DEFAULT_LANGUAGE = 'en_us';
+
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
@@ -58,7 +61,16 @@ export function decorateMain(main) {
  * loads everything needed to get to LCP.
  */
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
+  const preferredLanguage = navigator.languages.find(
+    (l) => SUPPORTED_LANGUAGES.includes(l),
+  ) || DEFAULT_LANGUAGE;
+  if (window.location.pathname === '/' && window.location.origin.match(/\.hlx\.(page|live)$/)) {
+    window.location.replace(`/${preferredLanguage}/`);
+  }
+
+  const [, lang] = window.location.pathname.split('/');
+  document.documentElement.lang = lang;
+
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
@@ -95,8 +107,8 @@ async function loadLazy(doc) {
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
+  loadHeader(doc.querySelector('header'), [['nav', `/${document.documentElement.lang}/nav`]]);
+  loadFooter(doc.querySelector('footer'), [['footer', `/${document.documentElement.lang}/footer`]]);
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   addFavIcon(`${window.hlx.codeBasePath}/styles/favicon.svg`);
