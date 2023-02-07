@@ -1,6 +1,7 @@
 footer {
-  padding: 2rem;
-  background-color: var(--overlay-background-color);
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: var(--footer-background-color);
   font-size: var(--body-font-size-s);
 }
 
