@@ -148,6 +148,10 @@ header nav[aria-expanded=true] .nav-sections {
   align-self: start;
 }
 
+header nav .nav-language ul {
+  display: none;
+}
+
 header nav .nav-sections ul  {
   list-style: none;
   padding-left: 0;
@@ -161,10 +165,6 @@ header nav .nav-sections ul > li {
 
 header nav .nav-sections ul > li > ul {
   margin-top: 0;
-}
-
-header nav .nav-language ul {
-  display: none;
 }
 
 header .nav-language > ul > li > ul > li {
