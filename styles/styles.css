@@ -19,6 +19,8 @@
   --footer-background-color: #f9f7f5;
   --highlight-background-color: #ccc;
   --text-color: #000;
+  --footer-border-color: #e4e4e4;
+  --header-border-color: #ffc72c;
 
   /* fonts */
   --body-font-family: 'Open Sans',sans-serif;
@@ -38,18 +40,25 @@
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
+   --heading-font-size-min: 12px;
 
   /* nav height */
   --nav-height: 133px;
-  --nav-mobile-height: 88px
+  --nav-mobile-height: 88px;
 
+  /* spacing */
+  --spacing-s: 15px;
+  --spacing-xm: 16px;
+  --spacing-m: 20px;
+  --spacing-l: 30px;
+  --spacing-xl: 32px;
 }
 
 body {
   font-size: var(--body-font-size-s);
   margin: 0;
   font-family: var(--body-font-family);
-  line-height: 32px;
+  line-height: var(--spacing-xl);
   letter-spacing: .3px;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -124,7 +133,7 @@ a.button:any-link, button {
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);
-  margin: 16px 0;
+  margin: var(--spacing-xm) 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -169,8 +178,8 @@ main input:hover {
 main .section {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: var(--spacing-s);
+  padding-right: var(--spacing-s);
 }
 
 main pre {
@@ -238,7 +247,7 @@ main .section.highlight {
 }
 
 main .default-content-wrapper {
-  padding: 30px;
+  padding: var(--spacing-l);
   margin: 0 auto 0 0;
 }
 

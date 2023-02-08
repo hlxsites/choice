@@ -5,8 +5,8 @@ footer {
 
 footer .block {
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: var(--spacing-s);
+  padding-right: var(--spacing-s);
 }
 
 footer .footer p {
@@ -19,12 +19,12 @@ footer .columns > div {
 }
 
 footer .block > div > div {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
 }
 
 footer .block > div > div:first-child {
-  border-bottom: 1px solid #e4e4e4;
+  border-bottom: 1px solid var(--footer-border-color);
 }
 
 footer .block ul {
@@ -39,7 +39,7 @@ footer .block p {
 }
 
 footer .block ul > li {
-  margin-right: 20px;
+  margin-right: var(--spacing-m);
 }
 
 @media (max-width: 992px) {

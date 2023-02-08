@@ -5,7 +5,7 @@ header nav {
   background-color: var(--background-color);
   font-family: var(--body-font-family);
   box-shadow: 0 2px 2px 0 rgb(119 112 91 / 25%);
-  border-top: 2px solid #ffc72c;
+  border-top: 2px solid var(--header-border-color);
 }
 
 header nav[aria-expanded=true] {
@@ -178,7 +178,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections .nav-drop {
     position: relative;
-    padding-right: 16px;
+    padding-right: var(--spacing-xm);
     cursor: pointer;
   }
 
@@ -219,11 +219,11 @@ header nav .nav-sections ul > li > ul > li {
     align-items: center;
     flex-direction: row;
     list-style: none;
-    font-size: 12px;
+    font-size: var(--heading-font-size-min);
   }
 
   header nav .nav-top li {
-    margin-left: 16px;
+    margin-left: var(--spacing-xm);
   }
 
   header nav .nav-sections > ul > li {
@@ -294,8 +294,8 @@ header nav .nav-top-bar {
   height: 40px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: var(--spacing-s);
+  padding-right: var(--spacing-s);
 }
 
 header nav .nav-top {
@@ -309,8 +309,8 @@ header nav .nav-main-bar {
   align-items: center;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: var(--spacing-s);
+  padding-right: var(--spacing-s);
 }
 
 header nav .nav-login {
@@ -324,7 +324,7 @@ header nav .nav-login {
     align-items: center;
     border-top: none;
     height: 88px;
-    padding: 16px;
+    padding: var(--spacing-xm);
   }
 
   header nav .nav-top-bar,
