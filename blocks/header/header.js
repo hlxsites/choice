@@ -105,9 +105,8 @@ export default async function decorate(block) {
     nav.id = 'nav';
     nav.innerHTML = html;
 
-    const classes = {'top-bar': ['language', 'top'], 'main-bar': ['brand', 'sections', 'login']};
-    let children = nav.children.length;
-    Object.entries(classes).forEach((c, i) => {
+    const classes = { 'top-bar': ['language', 'top'], 'main-bar': ['brand', 'sections', 'login'] };
+    Object.entries(classes).forEach((c) => {
       const navHead = document.createElement('div');
       navHead.classList.add(`nav-${c[0]}`);
       c[1].forEach((e) => {
@@ -115,10 +114,8 @@ export default async function decorate(block) {
         if (section) section.classList.add(`nav-${e}`);
         section.remove();
         navHead.appendChild(section);
-        children--;
       });
       nav.appendChild(navHead);
-
     });
 
     const navSections = nav.querySelector('.nav-sections');
@@ -162,6 +159,5 @@ export default async function decorate(block) {
 
     decorateIcons(nav);
     block.append(nav);
-
   }
 }
