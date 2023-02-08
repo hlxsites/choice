@@ -259,9 +259,29 @@ header nav .nav-tools {
   /*grid-area: tools;*/
 }
 
-/*todo: temp*/
-header .nav-language {
+header .nav-language > ul > li {
   visibility: hidden;
+  display: flex;
+  align-items: center;
+}
+
+header .nav-language > ul > li:first-child {
+  visibility: visible;
+}
+
+header .nav-language > ul > li > ul > li {
+  display: none;
+}
+
+header .nav-language > ul > li > ul > li:first-child {
+  display: block;
+}
+
+header .nav-language ul > li img {
+  display: block;
+  height: 21px;
+  max-width: 21px;
+  min-width: 21px;
 }
 
 header .nav-top-bar {
@@ -304,6 +324,11 @@ header .nav-main-bar {
   padding-right: 15px;
 }
 
+header .nav-login {
+  display: flex;
+  align-items: center;
+}
+
 header .nav-login img {
   width: 140px;
   height: auto;
@@ -315,6 +340,7 @@ header .nav-login img {
     align-items: center;
     border-top: none;
     height: 88px;
+    padding: 16px;
   }
 
   header .nav-top-bar,
