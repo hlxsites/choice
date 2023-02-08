@@ -1,7 +1,7 @@
 import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
 
 // media query match that indicates mobile/tablet width
-const MQ = window.matchMedia('(min-width: 900px)');
+const MQ = window.matchMedia('(min-width: 992px)');
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -105,10 +105,17 @@ export default async function decorate(block) {
     nav.id = 'nav';
     nav.innerHTML = html;
 
-    const classes = ['brand', 'sections', 'tools'];
-    classes.forEach((c, i) => {
-      const section = nav.children[i];
-      if (section) section.classList.add(`nav-${c}`);
+    const classes = { 'top-bar': ['language', 'top'], 'main-bar': ['brand', 'sections', 'login'] };
+    Object.entries(classes).forEach((c) => {
+      const navHead = document.createElement('div');
+      navHead.classList.add(`nav-${c[0]}`);
+      c[1].forEach((e) => {
+        const section = nav.children[0];
+        if (section) section.classList.add(`nav-${e}`);
+        section.remove();
+        navHead.appendChild(section);
+      });
+      nav.appendChild(navHead);
     });
 
     const navSections = nav.querySelector('.nav-sections');
@@ -123,6 +130,18 @@ export default async function decorate(block) {
           }
         });
       });
+    }
+
+    // nav-brand link
+    const navBrand = nav.querySelector('.nav-brand');
+    const picture = navBrand.querySelector('p picture');
+    const parent = picture.parentNode;
+    const link = parent.nextElementSibling.querySelector('a');
+
+    if (link && link.textContent.includes(link.getAttribute('href'))) {
+      link.parentElement.remove();
+      link.innerHTML = picture.outerHTML;
+      parent.replaceWith(link);
     }
 
     // hamburger for mobile

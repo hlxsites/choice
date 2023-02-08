@@ -3,11 +3,11 @@
 main .hero-container > div {
     max-width: unset;
 }
-  
+
 main .hero-container {
     padding: 0;
 }
-  
+
 main .hero {
     position: relative;
     padding: 32px;
@@ -37,4 +37,14 @@ main .hero img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+.hero.block img {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    max-width: 100vw;
 }
