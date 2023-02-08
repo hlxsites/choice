@@ -2,6 +2,7 @@ import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
 
 // media query match that indicates mobile/tablet width
 const MQ = window.matchMedia('(min-width: 992px)');
+const LANG_REGEX = /\/[a-z]{2}-[a-z]{2}\//;
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -131,6 +132,32 @@ export default async function decorate(block) {
         });
       });
     }
+
+    // language-selector
+    const pathName = window.location.pathname;
+    const currentLang = LANG_REGEX.exec(pathName)[0];
+    const navLanguage = nav.querySelector('.nav-language');
+    const languages = navLanguage.querySelectorAll('a');
+
+    languages.forEach((l) => {
+      const lang = LANG_REGEX.exec(l.href)[0];
+      if (currentLang === lang) {
+        const langSwitcher = document.createElement('div');
+        langSwitcher.classList.add('nav-language-switcher');
+
+        const langLabel = document.createElement('div');
+        langLabel.innerHTML = l.innerHTML;
+
+        const langPic = l.parentElement.parentElement.parentElement.querySelector('picture');
+        const switcherIcon = document.createElement('span');
+        switcherIcon.classList.add('nav-language-switcher-icon');
+
+        langSwitcher.appendChild(langPic);
+        langSwitcher.appendChild(langLabel);
+        langSwitcher.appendChild(switcherIcon);
+        navLanguage.appendChild(langSwitcher);
+      }
+    });
 
     // nav-brand link
     const navBrand = nav.querySelector('.nav-brand');
