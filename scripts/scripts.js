@@ -20,12 +20,50 @@ const SUPPORTED_LANGUAGES = ['en-us', 'fr-us', 'en-ca', 'de-de'];
 const DEFAULT_LANGUAGE = 'en_us';
 
 function buildHeroBlock(main) {
-  const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
-  // eslint-disable-next-line no-bitwise
-  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
+  const h1 = main.querySelector('h1');
+  const h2 = main.querySelector('h2');
+
+  if (!h1 && !picture) {
+    return;
+  }
+
+  const parent = picture.closest('div');
+  const pictures = parent.querySelectorAll('picture');
+
+  /*
+  * We identify a hero-block as the first div in main, with:
+  * - A picture and a h1
+  * - OR Two consecutive pictures
+  *
+  * Optionally a H2 can be supplied.
+  *  */
+  const decorate = (h1
+      && picture
+      // eslint-disable-next-line no-bitwise
+      && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING))
+    || (pictures.length === 2);
+
+  if (decorate) {
+    let elems = [];
+
+    if (pictures.length === 2) {
+      elems = elems.concat(Array.prototype.slice.call(pictures));
+    } else {
+      elems.push(picture);
+    }
+
+    if (h1 !== null) {
+      elems.push(h1);
+    }
+
+    if (h2 !== null) {
+      elems.push(h2);
+    }
+
     const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
+    section.append(buildBlock('hero', { elems }));
+
     main.prepend(section);
   }
 }

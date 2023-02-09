@@ -1,50 +1,45 @@
-/* block specific CSS goes here */
-
-main .hero-container > div {
-    max-width: unset;
+.section.hero-container {
+    padding-bottom: 0;
 }
 
-main .hero-container {
-    padding: 0;
+.section.hero-container .hero-wrapper {
+    padding-top: 0;
 }
 
-main .hero {
+.section.hero-container h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.hero.block picture:first-of-type img {
+    height: 430px;
     position: relative;
-    padding: 32px;
-    min-height: 300px;
-}
-
-main .hero h1 {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    color: white;
-}
-
-
-main .hero picture {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     object-fit: cover;
-    box-sizing: border-box;
-}
-
-main .hero img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.hero.block img {
-    position: relative;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
     width: 100vw;
     max-width: 100vw;
+}
+
+.hero.block picture:last-of-type {
+    display: block;
+    height: 0;
+    text-align: center;
+}
+
+.hero.block picture:last-of-type img {
+    position: relative;
+    top: -415px;
+}
+
+@media (min-width: 992px) {
+    .hero.block picture:first-of-type img {
+        height: 395px;
+    }
+
+    .hero.block picture:last-of-type img {
+        top: -380px;
+    }
 }
