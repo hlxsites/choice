@@ -184,6 +184,32 @@ export default async function decorate(block) {
     toggleMenu(nav, navSections, MQ.matches);
     MQ.addEventListener('change', () => toggleMenu(nav, navSections, MQ.matches));
 
+    const mobileNav = nav.querySelector('.mobile-nav').parentElement;
+    mobileNav.classList.add('mobile-nav-overlay');
+    // mobileNav.addEventListener('click', () => toggleMenu(nav, navSections));
+    const closeButton = nav.querySelector('.nav-hamburger button').cloneNode(true);
+    closeButton.addEventListener('click', () => toggleMenu(nav, navSections));
+    const mobileNavTop = mobileNav.querySelector('picture').parentElement;
+    mobileNavTop.classList.add('mobile-nav-top', 'nav-hamburger');
+    mobileNavTop.appendChild(closeButton);
+
+    const langContents = nav.querySelectorAll('.mobile-nav > div:last-child li > a');
+    const langSelector = document.createElement('select');
+    langContents.forEach((l) => {
+      const option = document.createElement('option');
+      option.label = l.innerHTML;
+      option.innerHTML = l.innerHTML;
+      option.value = LANG_REGEX.exec(l.href);
+      langSelector.appendChild(option);
+    });
+
+    const langContainer = nav.querySelector('.mobile-nav > div:last-child > div');
+    langContainer.querySelector('ul').remove();
+    const arrow = document.createElement('span');
+    arrow.classList.add('mobile-nav-selector-arrow');
+    langContainer.appendChild(arrow);
+    langContainer.appendChild(langSelector);
+
     decorateIcons(nav);
     block.append(nav);
   }

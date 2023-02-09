@@ -142,10 +142,14 @@ header nav .nav-sections a {
   font-weight: 600;
 }
 
-header nav[aria-expanded=true] .nav-sections {
-  display: block;
-  visibility: visible;
-  align-self: start;
+header nav .mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav .mobile-nav li {
+  padding-top: 16px;
 }
 
 header nav .nav-language ul {
@@ -180,10 +184,6 @@ header nav .nav-sections ul > li > ul > li {
     display: block;
     visibility: visible;
     white-space: nowrap;
-  }
-
-  header nav[aria-expanded=true] .nav-sections {
-    align-self: unset;
   }
 
   header nav .nav-sections .nav-drop {
@@ -300,6 +300,11 @@ header nav .nav-language .nav-language-switcher:hover {
   color: var(--header-language-hover-color)
 }
 
+header nav .mobile-nav img {
+  height: 48px;
+  width: auto;
+}
+
 header nav .nav-language .nav-language-switcher img {
   display: block;
   height: 21px;
@@ -360,7 +365,149 @@ header nav .nav-login a {
   letter-spacing: normal;
 }
 
+header nav .mobile-nav-overlay {
+  display: none;
+  background-color: rgb(0 0 0 / 80%);
+  z-index: 1002;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+header nav .mobile-nav {
+  background-color: var(--background-color);
+  width: 50%;
+  height: 100%;
+  border-radius: 3px;
+  padding: 25px 30px calc(4vh + 43px) 30px;
+  overflow: auto;
+}
+
+header nav .mobile-nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+  margin-bottom: 10px;
+  height: 100%;
+}
+
+header nav .mobile-nav > div:nth-child(2) > div {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav .mobile-nav p {
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+header nav .mobile-nav > div:nth-child(2) p {
+  margin-top: 0;
+}
+
+header nav .mobile-nav > div:nth-child(2) > div p {
+  width: 100%;
+}
+
+header nav .mobile-nav > div:last-child > div {
+  position: relative;
+}
+
+header nav .mobile-nav > div:nth-child(2) > div p:last-child {
+  width: auto;
+  margin-top: 8px;
+  font-size: var(--body-font-size-xxs);
+}
+
+header nav .mobile-nav a {
+  color: var(--link-color);
+  font-size: 16px;
+}
+
+header nav .mobile-nav > div:nth-child(2) a {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--link-highlight-color);
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 48px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  line-height: normal;
+}
+
+
+header nav .mobile-nav > div:nth-child(2) p:nth-child(odd) a {
+  color: var(--link-highlight-color);
+}
+
+header nav .mobile-nav > div:nth-child(2) p:nth-child(even) a {
+  background-clip: padding-box;
+  background-color: var(--link-highlight-color);
+  color: var(--background-color)
+}
+
+header nav .mobile-nav h3 {
+  color: var(--header-nav-top-color);
+  font-size: 16px;
+  margin-top: 32px;
+}
+
+header nav .mobile-nav select {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid var(--header-nav-language-select);
+  border-radius: 3px;
+  height: 54px;
+  margin-top: 10px;
+  color: var(--header-nav-top-color);
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  padding: 8px 30px 8px 10px;
+  appearance: none;
+}
+
+header nav .mobile-nav select:active,
+header nav .mobile-nav select:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: var(--link-color);
+}
+
+header nav span.mobile-nav-selector-arrow {
+  position: absolute;
+  right: 15px;
+  top: 57%;
+  border: solid var(--header-nav-top-color);
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 4.5px;
+  transform: rotate(45deg);
+  margin-left: var(--spacing-mini);
+}
+
+@media (max-width: 767px) {
+  header nav .mobile-nav {
+    width: 85%;
+  }
+}
+
 @media (max-width: 992px) {
+  header nav[aria-expanded=true] .mobile-nav-overlay {
+    display: inline-block;
+  }
+
   header nav {
     display: flex;
     align-items: center;
