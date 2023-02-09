@@ -15,7 +15,7 @@
     src: url("/fonts/Open_Sans_400.woff2") format("woff2");
     font-display: swap;
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
 }
 
 @font-face {
@@ -23,7 +23,7 @@
     src: url("/fonts/Open_Sans_600.woff2") format("woff2");
     font-display: swap;
     font-style: normal;
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
 }
 
  :root {
@@ -47,6 +47,9 @@
   --body-font-family: 'Open Sans',sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --font-size-medium: 16px;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -103,7 +106,7 @@ header {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
   line-height: 1.25;
   margin-top: 1em;
   margin-bottom: .5em;
@@ -156,7 +159,7 @@ a.button:any-link, button {
   padding: 5px 30px;
   text-align: center;
   font-style: normal;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);

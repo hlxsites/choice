@@ -152,7 +152,7 @@ export default async function decorate(block) {
         const switcherIcon = document.createElement('span');
         switcherIcon.classList.add('nav-language-switcher-icon');
 
-        langSwitcher.appendChild(langPic);
+        if (langPic) langSwitcher.appendChild(langPic);
         langSwitcher.appendChild(langLabel);
         langSwitcher.appendChild(switcherIcon);
         navLanguage.appendChild(langSwitcher);
@@ -186,10 +186,9 @@ export default async function decorate(block) {
 
     const mobileNav = nav.querySelector('.mobile-nav').parentElement;
     mobileNav.classList.add('mobile-nav-overlay');
-    // mobileNav.addEventListener('click', () => toggleMenu(nav, navSections));
     const closeButton = nav.querySelector('.nav-hamburger button').cloneNode(true);
     closeButton.addEventListener('click', () => toggleMenu(nav, navSections));
-    const mobileNavTop = mobileNav.querySelector('picture').parentElement;
+    const mobileNavTop = mobileNav.querySelector('.mobile-nav > div:first-child > div');
     mobileNavTop.classList.add('mobile-nav-top', 'nav-hamburger');
     mobileNavTop.appendChild(closeButton);
 

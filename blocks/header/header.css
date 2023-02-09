@@ -139,7 +139,7 @@ header nav .nav-sections a {
   color: var(--link-color);
   font-size: var(--body-font-size-header);
   letter-spacing: -.2px;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
 }
 
 header nav .mobile-nav ul {
@@ -149,7 +149,7 @@ header nav .mobile-nav ul {
 }
 
 header nav .mobile-nav li {
-  padding-top: 16px;
+  padding-top: var(--spacing-xm);
 }
 
 header nav .nav-language ul {
@@ -361,7 +361,7 @@ header nav .nav-login {
 header nav .nav-login a {
   font-size: var(--body-font-size-header);
   color: var(--link-highlight-color);
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
   letter-spacing: normal;
 }
 
@@ -425,7 +425,7 @@ header nav .mobile-nav > div:nth-child(2) > div p:last-child {
 
 header nav .mobile-nav a {
   color: var(--link-color);
-  font-size: 16px;
+  font-size: var(--font-size-medium);
 }
 
 header nav .mobile-nav > div:nth-child(2) a {
@@ -434,8 +434,8 @@ header nav .mobile-nav > div:nth-child(2) a {
   border: 1px solid var(--link-highlight-color);
   border-radius: 4px;
   box-shadow: none;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
   min-height: 48px;
   text-transform: capitalize;
   padding: 10px 20px;
@@ -458,12 +458,12 @@ header nav .mobile-nav > div:nth-child(2) p:nth-child(even) a {
 
 header nav .mobile-nav h3 {
   color: var(--header-nav-top-color);
-  font-size: 16px;
+  font-size: var(--font-size-medium);
   margin-top: 32px;
 }
 
 header nav .mobile-nav select {
-  font-size: 16px;
+  font-size: var(--font-size-medium);
   font-family: 'Open Sans', sans-serif;
   border: 1px solid var(--header-nav-language-select);
   border-radius: 3px;
