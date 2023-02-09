@@ -2,6 +2,7 @@ import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
 
 // media query match that indicates mobile/tablet width
 const MQ = window.matchMedia('(min-width: 992px)');
+const LANG_REGEX = /\/[a-z]{2}-[a-z]{2}\//;
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -132,6 +133,32 @@ export default async function decorate(block) {
       });
     }
 
+    // language-selector
+    const pathName = window.location.pathname;
+    const currentLang = LANG_REGEX.exec(pathName)[0];
+    const navLanguage = nav.querySelector('.nav-language');
+    const languages = navLanguage.querySelectorAll('a');
+
+    languages.forEach((l) => {
+      const lang = LANG_REGEX.exec(l.href)[0];
+      if (currentLang === lang) {
+        const langSwitcher = document.createElement('div');
+        langSwitcher.classList.add('nav-language-switcher');
+
+        const langLabel = document.createElement('div');
+        langLabel.innerHTML = l.innerHTML;
+
+        const langPic = l.parentElement.parentElement.parentElement.querySelector('picture');
+        const switcherIcon = document.createElement('span');
+        switcherIcon.classList.add('nav-language-switcher-icon');
+
+        if (langPic) langSwitcher.appendChild(langPic);
+        langSwitcher.appendChild(langLabel);
+        langSwitcher.appendChild(switcherIcon);
+        navLanguage.appendChild(langSwitcher);
+      }
+    });
+
     // nav-brand link
     const navBrand = nav.querySelector('.nav-brand');
     const picture = navBrand.querySelector('p picture');
@@ -156,6 +183,31 @@ export default async function decorate(block) {
     // prevent mobile nav behavior on window resize
     toggleMenu(nav, navSections, MQ.matches);
     MQ.addEventListener('change', () => toggleMenu(nav, navSections, MQ.matches));
+
+    const mobileNav = nav.querySelector('.mobile-nav').parentElement;
+    mobileNav.classList.add('mobile-nav-overlay');
+    const closeButton = nav.querySelector('.nav-hamburger button').cloneNode(true);
+    closeButton.addEventListener('click', () => toggleMenu(nav, navSections));
+    const mobileNavTop = mobileNav.querySelector('.mobile-nav > div:first-child > div');
+    mobileNavTop.classList.add('mobile-nav-top', 'nav-hamburger');
+    mobileNavTop.appendChild(closeButton);
+
+    const langContents = nav.querySelectorAll('.mobile-nav > div:last-child li > a');
+    const langSelector = document.createElement('select');
+    langContents.forEach((l) => {
+      const option = document.createElement('option');
+      option.label = l.innerHTML;
+      option.innerHTML = l.innerHTML;
+      option.value = LANG_REGEX.exec(l.href);
+      langSelector.appendChild(option);
+    });
+
+    const langContainer = nav.querySelector('.mobile-nav > div:last-child > div');
+    langContainer.querySelector('ul').remove();
+    const arrow = document.createElement('span');
+    arrow.classList.add('mobile-nav-selector-arrow');
+    langContainer.appendChild(arrow);
+    langContainer.appendChild(langSelector);
 
     decorateIcons(nav);
     block.append(nav);
