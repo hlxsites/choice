@@ -9,23 +9,56 @@ footer .block {
   padding-right: var(--spacing-s);
 }
 
+footer .footer h3 {
+  font-size: var(--body-font-size-xs);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 10px;
+}
+
 footer .footer p {
   margin: 0;
 }
 
-.columns > div {
-  display: flex;
-  flex-direction: column;
+footer .columns p {
+  max-width: 240px;
+  color: rgb(0 0 0 / 55%);
+  margin-top: 12px;
 }
 
-.columns img {
-  width: 100%;
+footer .columns img {
+  width: auto;
+  height: 48px;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+footer .columns ul {
+  margin: 0;
+}
+
+footer .block a {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: var(--font-weight-normal);
+}
+
+footer .block h4 a {
+  font-size: var(--body-font-size-s);
+}
+
+footer .columns li > a {
+  font-family: chFont, sans-serif;
+  font-size: var(--icon-font-size);
+  text-decoration: none;
+}
+
+footer .columns li > a:hover {
+  color: var(--icon-link-hover)
 }
 
 @media (min-width: 900px) {
   .columns > div {
     display: flex;
-    align-items: center;
     flex-direction: unset;
   }
 
@@ -40,6 +73,7 @@ footer .footer p {
 }
 
 footer .columns > div {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
@@ -62,10 +96,45 @@ footer .block ul {
 
 footer .block p {
   font-size: var(--body-font-size-xxs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-line-height);
+}
+
+footer .block h4 {
+  font-size: var(--body-font-size-s);
+  margin: 0 0 8px;
 }
 
 footer .block ul > li {
   margin-right: var(--spacing-m);
+}
+
+footer .footer .columns > div > div:last-child {
+  background-color: var(--card-background-color);
+  box-shadow: var(--card-box-shardow);
+  padding: 30px 26px 25px;
+  text-align: center;
+}
+
+footer .footer .columns > div > div:last-child img {
+  width: 120px;
+  height: auto;
+  margin-top: 0;
+}
+
+footer .footer .columns > div > div:last-child p {
+  font-size: var(--body-font-size-xs);
+  color: var(--header-nav-top-color);
+  margin: 24px 0;
+}
+
+footer .footer .columns > div > div:last-child a:nth-child(odd) {
+  background-clip: border-box;
+  border-radius: 6px;
+  box-shadow: 0 2px 0 0 #b3520d;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: none;
 }
 
 @media (max-width: 992px) {
