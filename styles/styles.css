@@ -39,7 +39,7 @@
     src: url("/fonts/Open_Sans_700.woff2") format("woff2");
     font-display: swap;
     font-style: normal;
-    font-weight: var(--font-weight-heavy);
+    font-weight: 700;
 }
 
  :root {
