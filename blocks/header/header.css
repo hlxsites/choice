@@ -231,7 +231,7 @@ header nav .nav-sections ul > li > ul > li {
   }
 
   header nav .nav-top a {
-    color: var(--header-nav-top-color);
+    color: var(--font-black);
   }
 
   header nav .nav-sections > ul > li {
@@ -457,7 +457,7 @@ header nav .mobile-nav > div:nth-child(2) p:nth-child(even) a {
 }
 
 header nav .mobile-nav h3 {
-  color: var(--header-nav-top-color);
+  color: var(--font-black);
   font-size: var(--font-size-medium);
   margin-top: 32px;
 }
@@ -469,7 +469,7 @@ header nav .mobile-nav select {
   border-radius: 3px;
   height: 54px;
   margin-top: 10px;
-  color: var(--header-nav-top-color);
+  color: var(--font-black);
   width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -489,7 +489,7 @@ header nav span.mobile-nav-selector-arrow {
   position: absolute;
   right: 15px;
   top: 57%;
-  border: solid var(--header-nav-top-color);
+  border: solid var(--font-black);
   border-width: 0 1px 1px 0;
   display: inline-block;
   padding: 4.5px;

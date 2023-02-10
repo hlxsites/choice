@@ -1,6 +1,7 @@
 footer {
   background-color: var(--footer-background-color);
   font-size: var(--body-font-size-xs);
+  height: 475px;
 }
 
 footer .block {
@@ -9,23 +10,56 @@ footer .block {
   padding-right: var(--spacing-s);
 }
 
+footer .footer h3 {
+  font-size: var(--body-font-size-xs);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 10px;
+}
+
 footer .footer p {
   margin: 0;
 }
 
-.columns > div {
-  display: flex;
-  flex-direction: column;
+footer .columns p {
+  max-width: 240px;
+  color: rgb(0 0 0 / 55%);
+  margin-top: 12px;
 }
 
-.columns img {
-  width: 100%;
+footer .columns img {
+  width: auto;
+  height: 48px;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+footer .columns ul {
+  margin: 0;
+}
+
+footer .block a {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: var(--font-weight-normal);
+}
+
+footer .block h4 a {
+  font-size: var(--body-font-size-s);
+}
+
+footer .columns li > a {
+  font-family: chFont, sans-serif;
+  font-size: var(--icon-font-size);
+  text-decoration: none;
+}
+
+footer .columns li > a:hover {
+  color: var(--icon-link-hover)
 }
 
 @media (min-width: 900px) {
   .columns > div {
     display: flex;
-    align-items: center;
     flex-direction: unset;
   }
 
@@ -40,6 +74,7 @@ footer .footer p {
 }
 
 footer .columns > div {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
@@ -53,28 +88,112 @@ footer .block > div > div:first-child {
   border-bottom: 1px solid var(--footer-border-color);
 }
 
+footer .block > div > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
 footer .block ul {
   display: flex;
   padding-left: 0;
   list-style: none;
   font-size: var(--body-font-size-xxs);
+  margin-top: 1em;
+}
+
+footer .block > div > div:last-child ul {
+  line-height: var(--font-line-height);
+  margin: 0;
+}
+
+footer .block > div > div:last-child a {
+  font-size: var(--body-font-size-xxs);
+  line-height: var(--font-line-height);
+  color: var(--font-black)
 }
 
 footer .block p {
   font-size: var(--body-font-size-xxs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-line-height);
+}
+
+footer .block h4 {
+  font-size: var(--body-font-size-s);
+  margin: 0 0 8px;
 }
 
 footer .block ul > li {
   margin-right: var(--spacing-m);
 }
 
+footer .footer .columns > div > div:last-child {
+  background-color: var(--card-background-color);
+  box-shadow: var(--card-box-shardow);
+  padding: 30px 26px 25px;
+  text-align: center;
+}
+
+footer .footer .columns > div > div:last-child img {
+  width: 120px;
+  height: auto;
+  margin-top: 0;
+}
+
+footer .footer .columns > div > div:last-child p {
+  font-size: var(--body-font-size-xs);
+  color: var(--font-black);
+  margin: 24px 0;
+}
+
+footer .footer .columns > div > div:last-child p:last-child {
+  margin-bottom: 0;
+}
+
+footer .footer .columns > div > div:last-child a {
+  display: block;
+  background-clip: border-box;
+  border-radius: 6px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 0 0 var(--link-border-color);
+  border: 2px solid transparent;
+  font-size: var(--body-font-size-xs);
+  font-weight: 700;
+  text-transform: none;
+  color: var(--background-color);
+  background-color: var(--link-highlight-color);
+  width: 100%;
+  text-decoration: none;
+}
+
+footer .footer .columns > div > div:last-child a:hover {
+  background-color: var(--link-background-color);
+}
+
 @media (max-width: 992px) {
+  footer {
+    height: 405px;
+  }
+
+  footer .block > div > div:last-child {
+    flex-direction: column;
+  }
+
+  footer .block > div > div:last-child ul {
+    flex-wrap: wrap;
+  }
+
   footer .footer .columns > div > div:first-child {
     display: none;
   }
 }
 
 @media (max-width: 1200px) {
+  footer {
+    height: 415px;
+  }
+
   footer .footer .columns > div > div:last-child {
     display: none;
   }

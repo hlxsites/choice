@@ -15,7 +15,7 @@
     src: url("/fonts/Open_Sans_400.woff2") format("woff2");
     font-display: swap;
     font-style: normal;
-    font-weight: var(--font-weight-normal);
+    font-weight: 400;
 }
 
 @font-face {
@@ -23,14 +23,33 @@
     src: url("/fonts/Open_Sans_600.woff2") format("woff2");
     font-display: swap;
     font-style: normal;
-    font-weight: var(--font-weight-bold);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: chFont;
+    src: url("/fonts/chFont.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/fonts/Open_Sans_700.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
 }
 
  :root {
   /* colors */
   --link-color: #00558c;
   --link-hover-color: #136ff6;
+  --icon-link-hover: #1a70a6;
   --link-highlight-color: #e26811;
+  --link-border-color: #b3520d;
+  --link-background-color: #f08336;
   --background-color: #fff;
   --overlay-background-color: #eee;
   --footer-background-color: #f9f7f5;
@@ -38,10 +57,12 @@
   --text-color: #000;
   --footer-border-color: #e4e4e4;
   --header-border-color: #ffc72c;
-  --header-nav-top-color: #212121;
+  --font-black: #212121;
   --header-language-color: rgb(0 0 0 / 55%);
   --header-language-hover-color: rgb(0 0 0 / 80%);
   --header-nav-language-select: #979797;
+  --card-background-color: #fafafa;
+  --card-box-shardow: 0 1px 5px 0 rgb(119 112 91 / 20%), 0 3px 4px 0 rgb(119 112 91 / 12%), 0 2px 4px 0 rgb(119 112 91 / 14%);
 
   /* fonts */
   --body-font-family: 'Open Sans',sans-serif;
@@ -49,7 +70,9 @@
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
   --font-weight-normal: 400;
   --font-weight-bold: 600;
+  --font-weight-heavy: 700;
   --font-size-medium: 16px;
+  --font-line-height: 1.4286;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -57,8 +80,11 @@
   --body-font-size-xs: 14px;
   --body-font-size-xxs: 12px;
   --body-font-size-header: 13px;
+  --icon-font-size: 21px;
 
   /* heading sizes */
+  --heading-font-size-3xl: 64px;
+  --heading-font-size-2xl: 52px;
   --heading-font-size-xxl: 48px;
   --heading-font-size-xl: 40px;
   --heading-font-size-l: 32px;
