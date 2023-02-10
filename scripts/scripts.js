@@ -65,6 +65,7 @@ function buildHeroBlock(main) {
     section.append(buildBlock('hero', { elems }));
 
     main.prepend(section);
+    parent.remove();
   }
 }
 
