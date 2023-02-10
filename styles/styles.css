@@ -212,6 +212,16 @@ main .section {
   padding-right: var(--spacing-s);
 }
 
+main .section.explore{
+
+  font-size: 18px;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: -0.25px;
+  line-height: 32px;
+  font-family: var(--body-font-family);
+
+}
+
 main pre {
   background-color: var(--overlay-background-color);
   padding: 1em;
