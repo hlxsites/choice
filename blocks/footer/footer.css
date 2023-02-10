@@ -87,11 +87,27 @@ footer .block > div > div:first-child {
   border-bottom: 1px solid var(--footer-border-color);
 }
 
+footer .block > div > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
 footer .block ul {
   display: flex;
   padding-left: 0;
   list-style: none;
   font-size: var(--body-font-size-xxs);
+}
+
+footer .block > div > div:last-child ul {
+  line-height: var(--font-line-height);
+}
+
+footer .block > div > div:last-child a {
+  font-size: var(--body-font-size-xxs);
+  line-height: var(--font-line-height);
+  color: var(--font-black)
 }
 
 footer .block p {
@@ -124,20 +140,39 @@ footer .footer .columns > div > div:last-child img {
 
 footer .footer .columns > div > div:last-child p {
   font-size: var(--body-font-size-xs);
-  color: var(--header-nav-top-color);
+  color: var(--font-black);
   margin: 24px 0;
 }
 
-footer .footer .columns > div > div:last-child a:nth-child(odd) {
+footer .footer .columns > div > div:last-child p:last-child {
+  margin-bottom: 0;
+}
+
+footer .footer .columns > div > div:last-child a {
+  display: block;
   background-clip: border-box;
   border-radius: 6px;
-  box-shadow: 0 2px 0 0 #b3520d;
-  font-size: 14px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 0 0 var(--link-border-color);
+  border: 2px solid transparent;
+  font-size: var(--body-font-size-xs);
   font-weight: 700;
   text-transform: none;
+  color: var(--background-color);
+  background-color: var(--link-highlight-color);
+  width: 100%;
+  text-decoration: none;
+}
+
+footer .footer .columns > div > div:last-child a:hover {
+  background-color: var(--link-background-color);
 }
 
 @media (max-width: 992px) {
+  footer .block > div > div:last-child {
+    flex-direction: column;
+  }
+
   footer .footer .columns > div > div:first-child {
     display: none;
   }

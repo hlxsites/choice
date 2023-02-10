@@ -40,6 +40,8 @@
   --link-hover-color: #136ff6;
   --icon-link-hover: #1a70a6;
   --link-highlight-color: #e26811;
+  --link-border-color: #b3520d;
+  --link-background-color: #f08336;
   --background-color: #fff;
   --overlay-background-color: #eee;
   --footer-background-color: #f9f7f5;
@@ -47,7 +49,7 @@
   --text-color: #000;
   --footer-border-color: #e4e4e4;
   --header-border-color: #ffc72c;
-  --header-nav-top-color: #212121;
+  --font-black: #212121;
   --header-language-color: rgb(0 0 0 / 55%);
   --header-language-hover-color: rgb(0 0 0 / 80%);
   --header-nav-language-select: #979797;
