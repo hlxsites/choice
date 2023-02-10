@@ -34,6 +34,14 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/fonts/Open_Sans_700.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: var(--font-weight-heavy);
+}
+
  :root {
   /* colors */
   --link-color: #00558c;
@@ -62,6 +70,7 @@
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
   --font-weight-normal: 400;
   --font-weight-bold: 600;
+  --font-weight-heavy: 700;
   --font-size-medium: 16px;
   --font-line-height: 1.4286;
 
@@ -74,6 +83,8 @@
   --icon-font-size: 21px;
 
   /* heading sizes */
+  --heading-font-size-3xl: 64px;
+  --heading-font-size-2xl: 52px;
   --heading-font-size-xxl: 48px;
   --heading-font-size-xl: 40px;
   --heading-font-size-l: 32px;
