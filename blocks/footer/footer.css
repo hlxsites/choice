@@ -98,6 +98,7 @@ footer .block ul {
   padding-left: 0;
   list-style: none;
   font-size: var(--body-font-size-xxs);
+  margin-top: 1em;
 }
 
 footer .block > div > div:last-child ul {
