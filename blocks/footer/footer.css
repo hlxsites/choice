@@ -102,6 +102,7 @@ footer .block ul {
 
 footer .block > div > div:last-child ul {
   line-height: var(--font-line-height);
+  margin: 0;
 }
 
 footer .block > div > div:last-child a {
