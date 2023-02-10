@@ -68,7 +68,8 @@
   --body-font-size-header: 13px;
 
   /* heading sizes */
-  --heading-font-size-2xl: 64px;
+  --heading-font-size-3xl: 64px;
+  --heading-font-size-2xl: 52px;
   --heading-font-size-xxl: 48px;
   --heading-font-size-xl: 40px;
   --heading-font-size-l: 32px;

@@ -90,7 +90,7 @@ body.explore .hero.block h2 {
 
     .hero.block h1 {
         margin: 180px 0 20px;
-        font-size: 64px;
+        font-size: var(--heading-font-size-3xl);
     }
 }
 
