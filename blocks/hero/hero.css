@@ -6,6 +6,11 @@
     height: 640px;
 }
 
+.hero.block picture:nth-child(2) {
+    display: block;
+    height: 309px;
+}
+
 .hero.block picture:nth-child(1) img {
     position: absolute;
     object-fit: cover;
