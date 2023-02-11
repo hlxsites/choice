@@ -32,17 +32,18 @@ function buildHeroBlock(main) {
   const pictures = parent.querySelectorAll('picture');
 
   /*
-  * We identify a hero-block as the first div in main, with:
-  * - A picture and a h1
-  * - OR Two consecutive pictures
-  *
-  * Optionally a H2 can be supplied.
-  *  */
-  const decorate = (h1
-      && picture
+   * We identify a hero-block as the first div in main, with:
+   * - A picture and a h1
+   * - OR Two consecutive pictures
+   *
+   * Optionally a H2 can be supplied.
+   *  */
+  const decorate =
+    (h1 &&
+      picture &&
       // eslint-disable-next-line no-bitwise
-      && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING))
-    || (pictures.length === 2);
+      h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING) ||
+    pictures.length === 2;
 
   if (decorate) {
     let elems = [];
@@ -100,10 +101,13 @@ export function decorateMain(main) {
  * loads everything needed to get to LCP.
  */
 async function loadEager(doc) {
-  const preferredLanguage = navigator.languages.find(
-    (l) => SUPPORTED_LANGUAGES.includes(l),
-  ) || DEFAULT_LANGUAGE;
-  if (window.location.pathname === '/' && window.location.origin.match(/\.hlx\.(page|live)$/)) {
+  const preferredLanguage =
+    navigator.languages.find((l) => SUPPORTED_LANGUAGES.includes(l)) ||
+    DEFAULT_LANGUAGE;
+  if (
+    window.location.pathname === '/' &&
+    window.location.origin.match(/\.hlx\.(page|live)$/)
+  ) {
     window.location.replace(`/${preferredLanguage}/`);
   }
 
@@ -146,8 +150,12 @@ async function loadLazy(doc) {
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'), [['nav', `/${document.documentElement.lang}/nav`]]);
-  loadFooter(doc.querySelector('footer'), [['footer', `/${document.documentElement.lang}/footer`]]);
+  loadHeader(doc.querySelector('header'), [
+    ['nav', `/${document.documentElement.lang}/nav`],
+  ]);
+  loadFooter(doc.querySelector('footer'), [
+    ['footer', `/${document.documentElement.lang}/footer`],
+  ]);
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   addFavIcon(`${window.hlx.codeBasePath}/styles/favicon.svg`);

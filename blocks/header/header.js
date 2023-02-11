@@ -8,7 +8,9 @@ function closeOnEscape(e) {
   if (e.code === 'Escape') {
     const nav = document.getElementById('nav');
     const navSections = nav.querySelector('.nav-sections');
-    const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
+    const navSectionExpanded = navSections.querySelector(
+      '[aria-expanded="true"]'
+    );
     if (navSectionExpanded && MQ.matches) {
       // eslint-disable-next-line no-use-before-define
       toggleAllNavSections(navSections);
@@ -54,12 +56,18 @@ function toggleAllNavSections(sections, expanded = false) {
  * @param {*} forceExpanded Optional param to force nav expand behavior when not null
  */
 function toggleMenu(nav, navSections, forceExpanded = null) {
-  const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
+  const expanded =
+    forceExpanded !== null
+      ? !forceExpanded
+      : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
-  document.body.style.overflowY = (expanded || MQ.matches) ? '' : 'hidden';
+  document.body.style.overflowY = expanded || MQ.matches ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || MQ.matches ? 'false' : 'true');
-  button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
+  button.setAttribute(
+    'aria-label',
+    expanded ? 'Open navigation' : 'Close navigation'
+  );
   // enable nav dropdown keyboard accessibility
   const navDrops = navSections.querySelectorAll('.nav-drop');
   if (MQ.matches) {
@@ -106,7 +114,10 @@ export default async function decorate(block) {
     nav.id = 'nav';
     nav.innerHTML = html;
 
-    const classes = { 'top-bar': ['language', 'top'], 'main-bar': ['brand', 'sections', 'login'] };
+    const classes = {
+      'top-bar': ['language', 'top'],
+      'main-bar': ['brand', 'sections', 'login'],
+    };
     Object.entries(classes).forEach((c) => {
       const navHead = document.createElement('div');
       navHead.classList.add(`nav-${c[0]}`);
@@ -122,12 +133,17 @@ export default async function decorate(block) {
     const navSections = nav.querySelector('.nav-sections');
     if (navSections) {
       navSections.querySelectorAll(':scope > ul > li').forEach((navSection) => {
-        if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
+        if (navSection.querySelector('ul'))
+          navSection.classList.add('nav-drop');
         navSection.addEventListener('click', () => {
           if (MQ.matches) {
-            const expanded = navSection.getAttribute('aria-expanded') === 'true';
+            const expanded =
+              navSection.getAttribute('aria-expanded') === 'true';
             toggleAllNavSections(navSections);
-            navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            navSection.setAttribute(
+              'aria-expanded',
+              expanded ? 'false' : 'true'
+            );
           }
         });
       });
@@ -148,7 +164,8 @@ export default async function decorate(block) {
         const langLabel = document.createElement('div');
         langLabel.innerHTML = l.innerHTML;
 
-        const langPic = l.parentElement.parentElement.parentElement.querySelector('picture');
+        const langPic =
+          l.parentElement.parentElement.parentElement.querySelector('picture');
         const switcherIcon = document.createElement('span');
         switcherIcon.classList.add('nav-language-switcher-icon');
 
@@ -182,17 +199,25 @@ export default async function decorate(block) {
     nav.setAttribute('aria-expanded', 'false');
     // prevent mobile nav behavior on window resize
     toggleMenu(nav, navSections, MQ.matches);
-    MQ.addEventListener('change', () => toggleMenu(nav, navSections, MQ.matches));
+    MQ.addEventListener('change', () =>
+      toggleMenu(nav, navSections, MQ.matches)
+    );
 
     const mobileNav = nav.querySelector('.mobile-nav').parentElement;
     mobileNav.classList.add('mobile-nav-overlay');
-    const closeButton = nav.querySelector('.nav-hamburger button').cloneNode(true);
+    const closeButton = nav
+      .querySelector('.nav-hamburger button')
+      .cloneNode(true);
     closeButton.addEventListener('click', () => toggleMenu(nav, navSections));
-    const mobileNavTop = mobileNav.querySelector('.mobile-nav > div:first-child > div');
+    const mobileNavTop = mobileNav.querySelector(
+      '.mobile-nav > div:first-child > div'
+    );
     mobileNavTop.classList.add('mobile-nav-top', 'nav-hamburger');
     mobileNavTop.appendChild(closeButton);
 
-    const langContents = nav.querySelectorAll('.mobile-nav > div:last-child li > a');
+    const langContents = nav.querySelectorAll(
+      '.mobile-nav > div:last-child li > a'
+    );
     const langSelector = document.createElement('select');
     langContents.forEach((l) => {
       const option = document.createElement('option');
@@ -202,7 +227,9 @@ export default async function decorate(block) {
       langSelector.appendChild(option);
     });
 
-    const langContainer = nav.querySelector('.mobile-nav > div:last-child > div');
+    const langContainer = nav.querySelector(
+      '.mobile-nav > div:last-child > div'
+    );
     langContainer.querySelector('ul').remove();
     const arrow = document.createElement('span');
     arrow.classList.add('mobile-nav-selector-arrow');
