@@ -241,7 +241,11 @@ main .section {
 main .section h2 {
   font-size: var(--heading-font-size-l);
   font-weight: var(--font-weight-normal);
-  letter-spacing: -0.1px;
+  letter-spacing: 0;
+}
+
+main .section p {
+  letter-spacing: 0;
 }
 
 main .section a {
