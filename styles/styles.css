@@ -42,6 +42,14 @@
     font-weight: 700;
 }
 
+@font-face {
+  font-family: fontawesome;
+  src: url("/fonts/fontawesome-webfont.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+
  :root {
   /* colors */
   --link-color: #00558c;
@@ -178,7 +186,12 @@ pre {
 
 /* buttons */
 
-a.button:any-link, button {
+a.button:hover, a.button:focus {
+  background-color: var(--link-hover-color);
+  cursor: pointer;
+}
+
+.home a.button:any-link, button {
   font-family: var(--body-font-family);
   display: inline-block;
   box-sizing: border-box;
@@ -190,15 +203,9 @@ a.button:any-link, button {
   font-weight: var(--font-weight-bold);
   cursor: pointer;
   color: var(--background-color);
-  background-color: var(--link-color);
-  margin: var(--spacing-xm) 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;
 }
 
-a.button:hover, a.button:focus, button:hover, button:focus  {
+button:hover, button:focus {
   background-color: var(--link-hover-color);
   cursor: pointer;
 }
