@@ -238,14 +238,14 @@ main .section {
   padding-right: var(--spacing-s);
 }
 
-main .section h2{
+main .section h2 {
   font-size: var(--heading-font-size-l);
   font-weight: var(--font-weight-normal);
   letter-spacing: -0.1px;
 }
 
 main .section a {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 main pre {
