@@ -1,0 +1,101 @@
+.explorer-teaser > div > div:nth-child(2) h3 a {
+    color: var(--link-color-secondary);
+}
+
+.explorer-teaser > div > div > p:has(picture) {
+    margin: 0;
+    padding: 0;
+}
+
+.explorer-teaser > div > div:nth-child(2) p {
+    margin: 0;
+    padding: 0 20px 20px;
+}
+
+
+.explorer-teaser > div > div:nth-child(2) h3 {
+    font-size: 1.17em;
+    padding: 20px 20px 0;
+    margin: 0 0 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.explorer-teaser > div:first-child > div:first-child h3 a {
+    font-size: var(--body-font-size-xl);
+    color: var(--link-color-secondary);
+    letter-spacing: normal;
+}
+
+.explorer-teaser > div:first-child > div h3 a:hover {
+    color: var(--icon-link-hover);
+}
+
+.explorer-teaser > div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.explorer-teaser > div > div:first-child {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.explorer-teaser > div > div:first-child img {
+    position: absolute;
+    left: 0;
+    width: 50vw;
+}
+
+.explorer-teaser > div > div:first-child h3 {
+    position: absolute;
+    background: var(--background-color);
+    white-space: break-spaces;
+    text-align: right;
+    max-width: 475px;
+    padding: 10px 20px 10px 10px;
+    margin-right: 15px;
+    margin-top: 80px;
+}
+
+.explorer-teaser > div > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 33% 1fr;
+}
+
+.explorer-teaser > div > div:nth-child(2) > p:has(picture) {
+    grid-row: auto / span 2;
+    margin-left: 15px;
+    padding: 20px 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.explorer-teaser > div > div:nth-child(2) p:nth-last-child(2),
+.explorer-teaser > div > div:nth-child(2) p:nth-last-child(4) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.explorer-teaser > div > div:nth-child(2) a.button {
+    font-weight: var(--font-weight-heavy);
+    text-decoration: underline;
+    text-transform: uppercase;
+    background-color: var(--background-color);
+    border: 1px solid var(--link-highlight-color);
+    border-radius: 0;
+    color: var(--link-highlight-color);
+    padding-bottom: var(--spacing-s);
+    padding-top: var(--spacing-s);
+}
+
+.explorer-teaser > div > div:nth-child(2) a.button:hover {
+    color: var(--background-color);
+    background-color: var(--link-highlight-color);
+}
+
+.explorer-teaser > div > div:nth-child(2) .button-container {
+    grid-column: 2;
+    margin-left: auto;
+    padding-right: 0;
+    margin-right: -15px;
+}
+
+/* todo: all other sizes */

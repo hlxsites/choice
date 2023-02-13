@@ -10,6 +10,44 @@
     position: relative;
 }
 
+.explore-teaser > div:nth-child(2) h2 {
+    font-size: var(--body-font-size-xl);
+    margin: 0;
+    padding: 0 20px 20px;
+}
+
+.explore-teaser > div:nth-child(2) h2 a,
+.explore-teaser > div:nth-child(2) h3 a {
+    color: var(--link-color-secondary);
+}
+
+.explore-teaser > div:first-child .button-container a {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--body-font-size-xxl);
+    line-height: var(--font-line-height);
+    background: none;
+    color: var(--link-color);
+    text-align: left;
+    white-space: break-spaces;
+    margin: 0;
+    padding: 0;
+}
+
+.explore-teaser > div:nth-child(2) p {
+    margin: 0;
+    padding: 0 20px 20px;
+}
+
+.explore-teaser > div:nth-child(2) p:has(picture) {
+    margin: 0;
+    padding: 0;
+}
+
+.explore-teaser > div:nth-child(2) h2 a:hover,
+.explore-teaser > div:nth-child(2) h3 a:hover {
+    color: var(--icon-link-hover);
+}
+
 .explore-teaser > div:nth-child(2) {
     display: flex;
     align-items: flex-start;
@@ -34,46 +72,7 @@
 
 .explore-teaser > div:nth-child(2) > div:first-child {
     border: 1px solid var(--border-color);
-    align-self: flex-start;
-}
-
-.explore-teaser > div:nth-child(2) p {
-    margin: 0;
-    padding: 0 20px 20px;
-}
-
-.explore-teaser > div:nth-child(2) p:has(picture) {
-    margin: 0;
-    padding: 0;
-}
-
-.explore-teaser > div:nth-child(2) h2,
-.explore-teaser > div:nth-child(2) h3{
-    font-size: var(--body-font-size-xl);
-    padding: 20px 20px 0;
-    margin: 0 0 10px;
-}
-
-.explore-teaser > div:nth-child(2) h2 a,
-.explore-teaser > div:nth-child(2) h3 a {
-    color: var(--link-color-secondary);
-}
-
-.explore-teaser > div:first-child .button-container a {
-    font-weight: var(--font-weight-bold);
-    font-size: var(--body-font-size-xxl);
-    line-height: var(--font-line-height);
-    background: none;
-    color: var(--link-color);
-    text-align: left;
-    white-space: break-spaces;
-    margin: 0;
-    padding: 0;
-}
-
-.explore-teaser > div:nth-child(2) h2 a:hover,
-.explore-teaser > div:nth-child(2) h3 a:hover{
-    color: var(--icon-link-hover);
+    width: 66%;
 }
 
 .explore-teaser > div:first-child .button-container {
@@ -95,7 +94,7 @@
     object-fit: cover;
 }
 
-.explore-teaser > div:nth-child(2) > div:nth-child(2) {
+.explore-teaser > div:nth-child(2) > div:nth-child(2){
     display: grid;
     grid-template-columns: 1fr 1.9fr;
 }
@@ -105,15 +104,17 @@
 }
 
 .explore-teaser > div:nth-child(2) > div:nth-child(2) p:has(picture) {
-    grid-row: span 2 / auto;
+    grid-row: auto / span 2;
     margin-left: 15px;
     padding: 20px 15px;
     border-top: 1px solid var(--border-color);
 }
 
 .explore-teaser > div:nth-child(2) > div:nth-child(2) h3 {
-    font-size: var(--body-font-size-l);
+    font-size: 1.17em;
     border-top: 1px solid var(--border-color);
+    padding: 20px 15px;
+    margin: 0;
 }
 
 .explore-teaser > div:nth-child(2) > div:nth-child(2) .button-container {
@@ -127,6 +128,8 @@
 .explore-teaser > div:nth-child(2) > div:nth-child(2) p:nth-last-child(4) {
     border-bottom: 1px solid var(--border-color);
 }
+
+/* todo: all other sizes */
 
 @media (min-width: 768px) {
     .explore-teaser > div:first-child .button-container {
