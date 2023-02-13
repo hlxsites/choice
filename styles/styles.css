@@ -42,14 +42,6 @@
     font-weight: 700;
 }
 
-@font-face {
-  font-family: fontawesome;
-  src: url("/fonts/fontawesome-webfont.woff2") format("woff2");
-  font-display: swap;
-  font-style: normal;
-  font-weight: normal;
-}
-
  :root {
   /* colors */
   --link-color: #00558c;
