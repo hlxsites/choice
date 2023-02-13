@@ -129,8 +129,6 @@
     border-bottom: 1px solid var(--border-color);
 }
 
-/* todo: all other sizes */
-
 @media (min-width: 768px) {
     .explore-teaser > div:first-child .button-container {
         width: 41.6667%;
