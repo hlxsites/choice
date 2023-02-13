@@ -195,6 +195,12 @@ a.button:hover, a.button:focus {
   font-weight: var(--font-weight-bold);
   cursor: pointer;
   color: var(--background-color);
+  background-color: var(--link-color);
+  margin: var(--spacing-xm) 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 30px;
 }
 
 button:hover, button:focus {
