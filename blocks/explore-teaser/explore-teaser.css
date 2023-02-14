@@ -159,7 +159,7 @@
         display: block;
     }
 
-    .explore-teaser > div:nth-child(2) p {
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) p{
         padding: 0;
     }
 
