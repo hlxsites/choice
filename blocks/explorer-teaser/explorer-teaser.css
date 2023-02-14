@@ -95,8 +95,8 @@
     border-top: 1px solid var(--border-color);
 }
 
-.explorer-teaser > div > div:nth-child(2) p:nth-last-child(2),
-.explorer-teaser > div > div:nth-child(2) p:nth-last-child(4) {
+.explorer-teaser > div > div:nth-child(2) p:nth-last-child(3),
+.explorer-teaser > div > div:nth-child(2) p:nth-last-child(5) {
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -110,6 +110,7 @@
     color: var(--link-highlight-color);
     padding-bottom: var(--spacing-s);
     padding-top: var(--spacing-s);
+    margin-bottom: 0;
 }
 
 .explorer-teaser > div > div:nth-child(2) a.button:hover {
@@ -117,10 +118,30 @@
     background-color: var(--link-highlight-color);
 }
 
+.explorer-teaser > div > div:nth-child(2) p:last-child a.button {
+    border: none;
+    text-transform: none;
+    color: var(--link-color-secondary);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+    padding: 0;
+}
+
+.explorer-teaser > div > div:nth-child(2) p:last-child a.button::after {
+    font-family: chFont, sans-serif;
+    font-size: .8em;
+    content: " \E816";
+}
+
+.explorer-teaser > div > div:nth-child(2) p:last-child a.button:hover {
+    background: none;
+    color: var(--link-color);
+}
+
 .explorer-teaser > div > div:nth-child(2) .button-container {
     grid-column: 2;
     margin-left: auto;
-    padding-right: 0;
+    padding: 0;
     margin-right: -15px;
 }
 
