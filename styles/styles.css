@@ -54,6 +54,7 @@
   --overlay-background-color: #eee;
   --footer-background-color: #f9f7f5;
   --highlight-background-color: #ccc;
+  --page-navigation-background-color: #005f61;
   --text-color: #000;
   --footer-border-color: #e4e4e4;
   --header-border-color: #ffc72c;
@@ -83,6 +84,7 @@
   --body-font-size-xxs: 12px;
   --body-font-size-header: 13px;
   --icon-font-size: 21px;
+  --page-navigation-font-size: 16px;
 
   /* heading sizes */
   --heading-font-size-3xl: 64px;
@@ -319,6 +321,60 @@ main .default-content-wrapper {
   margin: 0 auto 0 0;
 }
 
+.section.page-navigation {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--page-navigation-background-color);
+    border-top: 6px solid var(--background-color);
+}
+
+.section.page-navigation > div.default-content-wrapper {
+    width: 100%;
+    max-width: unset;
+    margin: 0;
+    padding: var(--spacing-l);
+}
+
+.section.page-navigation ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section.page-navigation ul > li {
+    position: relative;
+    width: 210px;
+    text-align: center;
+}
+
+.section.page-navigation ul > li > a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--background-color);
+    font-size: var(--page-navigation-font-size);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+}
+
+.section.page-navigation ul > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    border-bottom: 2px solid #fff;
+    transition: 0.4s;
+}
+
+.section.page-navigation ul > li > a:hover::after {
+    width: 100%;
+    left: 0;
+}
 
 @media (min-width: 768px) {
   main .section,
@@ -329,6 +385,14 @@ main .default-content-wrapper {
   main .default-content-wrapper {
     width: 75%;
   }
+
+    .section.page-navigation ul {
+        flex-direction: row;
+    }
+
+    .section.page-navigation ul > li {
+        width: unset;
+    }
 }
 
 @media (min-width: 992px) {
