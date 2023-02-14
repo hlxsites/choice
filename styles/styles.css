@@ -238,6 +238,20 @@ main .section {
   padding-right: var(--spacing-s);
 }
 
+main .section h2 {
+  font-size: var(--heading-font-size-l);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0;
+}
+
+main .section p {
+  letter-spacing: 0;
+}
+
+main .section a {
+  text-decoration: underline;
+}
+
 main pre {
   background-color: var(--overlay-background-color);
   padding: 1em;
@@ -277,15 +291,6 @@ main img {
 }
 
 @media (min-width: 900px) {
-  :root {
-    --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 48px;
-    --heading-font-size-l: 36px;
-    --heading-font-size-m: 30px;
-    --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;
-  }
-
   .section > div {
     max-width: 1200px;
     margin: auto;
@@ -303,7 +308,7 @@ main .section.highlight {
 }
 
 main .default-content-wrapper {
-  padding: var(--spacing-l);
+  padding: 0 var(--spacing-l);
   margin: 0 auto 0 0;
 }
 
