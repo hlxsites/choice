@@ -20,6 +20,10 @@
     margin-bottom: 0;
 }
 
+.link-on-picture a {
+    color: var(--page-navigation-background-color);
+}
+
 .link-on-picture .text-link-on-picture {
     text-decoration: none;
     position: absolute;
