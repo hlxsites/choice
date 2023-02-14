@@ -27,7 +27,7 @@
 
 .deal.block div.button-container a {
     margin: 0;
-    padding: 10px 20px;
+    padding: 15px 20px;
     box-shadow: 2px 2px 0 rgb(98 66 11 / 40%);
     background-clip: padding-box;
     background-color: var(--link-highlight-color);
