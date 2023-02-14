@@ -1,0 +1,54 @@
+.link-on-pictures {
+    display: block;
+    box-sizing: border-box;
+    margin-left: -15px;
+    margin-right: -15px;    
+    padding-bottom: 15px;
+}
+
+.link-on-picture {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+
+.link-on-picture img {
+    border: solid 1px #ddd; 
+}
+
+.link-on-picture p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.text-link-on-picture {
+    position: absolute;
+    top: 50%;    
+    font-size: 24px;
+    font-weight: 400;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    text-align: left;
+    transform: translateY(-50%);
+}
+
+
+@media (max-width: 990px) {
+    .link-on-picture {
+        height: 160px;        
+    }
+    .link-on-picture img {
+        height: 160px;
+        width: 800px;
+        object-fit: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .link-on-picture {
+        width: 25%;
+    }
+}
