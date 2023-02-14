@@ -8,8 +8,8 @@
 
 .link-on-picture {
     position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: var(--spacing-s);
+    padding-right: var(--spacing-s);
     float: left;
 }
 
