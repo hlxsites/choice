@@ -258,10 +258,28 @@ main .section {
   padding-right: var(--spacing-s);
 }
 
+.home main .default-content-wrapper::before {
+  content: '\00a0' ;
+  border-bottom: 5px solid #005f61;
+  margin-left: -65px;
+  margin-top: var(--spacing-l);
+  width: 250px;
+  height: 10px;
+  display:block;
+}
+
 main .section h2 {
   font-size: var(--heading-font-size-l);
   font-weight: var(--font-weight-normal);
   letter-spacing: 0;
+}
+
+.home main .section h2 {
+  font-size: var(--heading-font-size-xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0;
+  margin-bottom: 0;
+  margin-top: var(--spacing-m);
 }
 
 main .section p {
