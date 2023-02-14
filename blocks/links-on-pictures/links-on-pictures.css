@@ -32,6 +32,7 @@
     text-align: left;
     transform: translateY(-50%);
 }
+
 .link-on-picture .text-link-on-picture:hover {
     text-decoration: underline;
 }
