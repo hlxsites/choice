@@ -1,5 +1,6 @@
 .explore-teaser-wrapper {
-    padding: 0 var(--spacing-s)
+    padding: 0 var(--spacing-s);
+    clear: left;
 }
 
 .explore-teaser {
@@ -15,6 +16,7 @@
 .explore-teaser > div:nth-child(2) h2 a,
 .explore-teaser > div:nth-child(2) h3 a {
     color: var(--link-color-secondary);
+    text-decoration: none;
 }
 
 .explore-teaser > div:first-child .button-container a {
@@ -45,6 +47,7 @@
 .explore-teaser > div:nth-child(2) h2 a:hover,
 .explore-teaser > div:nth-child(2) h3 a:hover {
     color: var(--icon-link-hover);
+    text-decoration: underline;
 }
 
 .explore-teaser > div:nth-child(2) {
