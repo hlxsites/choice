@@ -1,5 +1,6 @@
 .deal.block {
     padding: var(--spacing-l);
+    margin-left: var(--spacing-l);
     background-color: var(--footer-background-color);
 }
 
@@ -42,6 +43,6 @@
 
 @media (min-width: 768px) {
     .deal.block {
-        width: 75%;
+        width: 70%;
     }
 }
