@@ -4,7 +4,7 @@
 }
 
 .explore-teaser {
-    padding: var(--spacing-l) var(--spacing-l) var(--spacing-l) 0;
+    padding: var(--spacing-l) 0 var(--spacing-l) 0;
 }
 
 .explore-teaser > div:nth-child(2) h2 {
