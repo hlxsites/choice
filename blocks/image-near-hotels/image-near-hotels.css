@@ -1,0 +1,119 @@
+.image-near-hotels.block  {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 var(--spacing-l);
+}
+
+.image-near-hotels.block > div > div {
+  position: relative;
+}
+
+.image-near-hotels.block > div:nth-child(3) {
+  color: var(--article-teaser-side-text);
+  font-size: var(--font-size-medium);
+  letter-spacing: -0.25px;
+  text-align: left;
+  line-height: 27px;
+}
+
+.image-near-hotels.block > div:nth-child(3) > div {
+  border-top: 1px solid;
+  border-color: var(--article-teaser-border);
+  padding-top: 30px;
+}
+
+.image-near-hotels.block::after, .image-near-hotels.block::before {
+  content: ' ';
+  display: table;
+}
+
+.ch-icon-map-marker::before {
+  font-family: chFont, sans-serif;
+  content: '';
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  vertical-align: middle;
+}
+
+.ch-icon-arrow-right::before {
+  font-family: chFont, sans-serif;
+  content: '';
+  padding-left: 5px !important;
+  font-size: 10px !important;
+}
+
+main .text-in-image a{
+  font-size: var(--body-font-size-xs);
+  text-align: right;
+  font-family: var(--body-font-family);
+  letter-spacing: 0;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  font-style: normal;
+  cursor: pointer;
+  color: var(--background-color);
+  background-color: transparent;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+main .text-in-image a:hover{
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
+.text-in-image {
+  bottom: 0;
+  left: auto;
+  padding: 0.2em 0.1em;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  text-shadow: none;
+  z-index: 1;
+  color: var(--background-color);
+  background-color: transparent;
+}
+
+.text-in-image::after {
+  content: '';
+  display: block;
+  height: 100px;
+  margin-top: -100px;
+  position: relative;
+}
+
+.image-near-hotels.block > div:nth-child(1) > div:nth-child(1)::after {
+  content: '';
+  display: block;
+  height: 100px;
+  margin-top: -100px;
+  position: relative;
+  background: rgba(255 255 255 / 0%);
+  background: linear-gradient(to top, rgba(255 255 255 / 0%) 0%, #000 100%);
+  background: linear-gradient(to bottom, rgba(255 255 255 / 0%) 0%, #000 100%);
+}
+
+@media (min-width: 768px) {
+  .image-near-hotels.block > div:nth-child(1) {
+    width: 75%;
+    padding-right: 15px;
+  }
+
+  .image-near-hotels.block > div:nth-child(3) {
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-near-hotels.block > div:nth-child(1) {
+    margin: 20px 0;
+  }
+}
+

@@ -62,6 +62,8 @@
   --header-language-hover-color: rgb(0 0 0 / 80%);
   --header-nav-language-select: #979797;
   --card-background-color: #fafafa;
+  --article-teaser-side-text: #757575;
+  --article-teaser-border: #bfbfbf;
   --card-box-shardow: 0 1px 5px 0 rgb(119 112 91 / 20%), 0 3px 4px 0 rgb(119 112 91 / 12%), 0 2px 4px 0 rgb(119 112 91 / 14%);
 
   /* fonts */
@@ -176,7 +178,12 @@ pre {
 
 /* buttons */
 
-a.button:any-link, button {
+a.button:hover, a.button:focus {
+  background-color: var(--link-hover-color);
+  cursor: pointer;
+}
+
+.home a.button:any-link, button {
   font-family: var(--body-font-family);
   display: inline-block;
   box-sizing: border-box;
@@ -196,7 +203,7 @@ a.button:any-link, button {
   border-radius: 30px;
 }
 
-a.button:hover, a.button:focus, button:hover, button:focus  {
+button:hover, button:focus {
   background-color: var(--link-hover-color);
   cursor: pointer;
 }
