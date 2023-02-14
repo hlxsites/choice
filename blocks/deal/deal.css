@@ -33,6 +33,7 @@
     background-color: var(--link-highlight-color);
     border: 2px solid transparent;
     border-radius: 6px;
+    font-weight: var(--font-weight-heavy);
     color: var(--background-color);
     text-decoration: none;
     text-transform: uppercase;
