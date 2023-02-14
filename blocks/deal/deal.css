@@ -1,5 +1,6 @@
 .deal.block {
     padding: var(--spacing-l);
+    margin-left: var(--spacing-l);
     background-color: var(--footer-background-color);
 }
 
