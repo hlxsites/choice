@@ -94,7 +94,7 @@
     object-fit: cover;
 }
 
-.explore-teaser > div:nth-child(2) > div:nth-child(2){
+.explore-teaser > div:nth-child(2) > div:nth-child(2) {
     display: grid;
     grid-template-columns: 1fr 1.9fr;
 }
@@ -151,7 +151,7 @@
     }
 
     .explore-teaser > div:nth-child(2) > div:first-child,
-    .explore-teaser > div:nth-child(2) > div:first-child img{
+    .explore-teaser > div:nth-child(2) > div:first-child img {
         width: 100%;
     }
 
