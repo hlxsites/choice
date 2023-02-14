@@ -21,7 +21,7 @@ function createImageTeaser(block) {
 
   const mapMarker = document.createElement('span');
   mapMarker.className = 'ch-icon-map-marker fs-20';
-  mapMarker.innerHTML = '&nbsp;';
+  mapMarker.innerHTML = '&nbsp;&nbsp;';
 
   const textAside = rows[2].innerHTML.trim();
   const divWithSpan = textAside.slice(0, 5) + mapMarker.outerHTML + textAside.slice(5);
