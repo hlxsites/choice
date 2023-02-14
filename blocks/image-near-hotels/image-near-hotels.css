@@ -11,7 +11,7 @@
 .image-near-hotels.block > div:nth-child(3) {
   color: var(--article-teaser-side-text);
   font-size: var(--font-size-medium);
-  letter-spacing: -0.25px;
+  letter-spacing: 0;
   text-align: left;
   line-height: 27px;
 }
@@ -19,7 +19,7 @@
 .image-near-hotels.block > div:nth-child(3) > div {
   border-top: 1px solid;
   border-color: var(--article-teaser-border);
-  padding-top: 30px;
+  padding-top: var(--spacing-l);
 }
 
 .image-near-hotels.block::after, .image-near-hotels.block::before {
@@ -31,7 +31,7 @@
   font-family: chFont, sans-serif;
   content: '';
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   position: relative;
   vertical-align: middle;
 }
@@ -39,8 +39,8 @@
 .ch-icon-arrow-right::before {
   font-family: chFont, sans-serif;
   content: '';
-  padding-left: 5px !important;
-  font-size: 10px !important;
+  padding-left: 5px;
+  font-size: 10px;
 }
 
 main .text-in-image a{
@@ -51,7 +51,6 @@ main .text-in-image a{
   text-decoration: none;
   border: 0;
   padding: 0;
-  font-style: normal;
   cursor: pointer;
   color: var(--background-color);
   background-color: transparent;
