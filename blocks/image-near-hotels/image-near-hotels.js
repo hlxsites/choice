@@ -1,5 +1,5 @@
 function createImageTeaser(block) {
-  const rows = block.querySelectorAll('.image-near-hotels > div');
+  /*const rows = block.querySelectorAll('.image-near-hotels > div');
   rows[1].style.display = 'none';
   rows[1].className = '';
 
@@ -25,7 +25,7 @@ function createImageTeaser(block) {
 
   const textAside = rows[2].innerHTML.trim();
   const divWithSpan = textAside.slice(0, 5) + mapMarker.outerHTML + textAside.slice(5);
-  rows[2].innerHTML = divWithSpan;
+  rows[2].innerHTML = divWithSpan;*/
 }
 
 export default async function decorate(block) {
