@@ -1,0 +1,46 @@
+.deal.block {
+    padding: var(--spacing-l);
+    background-color: var(--footer-background-color);
+}
+
+.deal.block h2 {
+    font-weight: var(--font-weight-bold);
+}
+
+.deal.block > div:nth-child(1) > div {
+    display: flex;
+}
+
+.deal.block > div:nth-child(1) > div p {
+    margin: 0;
+}
+
+.deal.block > div:nth-child(1) > div img {
+    height: 40px;
+}
+
+.deal.block > div:nth-child(1) > div img:first-of-type {
+    margin-right: 40px;
+}
+
+.deal.block div.button-container a {
+    margin: 0;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 0 rgb(98 66 11 / 40%);
+    background-clip: padding-box;
+    background-color: var(--link-highlight-color);
+    border: 2px solid transparent;
+    border-radius: 6px;
+    color: var(--background-color);
+    text-transform: uppercase;
+}
+
+.deal.block div.button-container a:hover {
+    background-color: var(--link-background-color);
+}
+
+@media (min-width: 768px) {
+    .deal.block {
+        width: 75%;
+    }
+}
