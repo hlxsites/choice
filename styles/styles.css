@@ -365,7 +365,7 @@ main .default-content-wrapper {
     padding: var(--spacing-l);
 }
 
-.section.page-navigation > div.default-content-wrapper:before {
+.section.page-navigation > div.default-content-wrapper::before {
     content: none;
 }
 
@@ -399,7 +399,7 @@ main .default-content-wrapper {
     position: absolute;
     bottom: 0;
     left: 50%;
-    width: 0%;
+    width: 0;
     border-bottom: 2px solid #fff;
     transition: 0.4s;
 }

@@ -90,7 +90,7 @@
 
 .explorer-teaser > div > div:nth-child(2) {
     display: grid;
-    grid-template-columns: 33% 1fr;
+    grid-template-columns: 33% 66%;
     margin-right: auto;
     width: 555px;
 }
@@ -150,10 +150,14 @@
 }
 
 .explorer-teaser > div > div:nth-child(2) .button-container {
-    grid-column: 2;
+    grid-column: span 2;
     margin-left: auto;
     padding: 0;
     margin-right: var(--spacing-s);
+    margin-bottom: var(--spacing-xs);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 @media (min-width: 768px) {
@@ -174,7 +178,7 @@
 
     .explorer-teaser > div > div:nth-child(2) {
         display: block;
-        width: 100%;
+        width: 100% !important;
     }
 
     .explorer-teaser > div > div:first-child img {
@@ -187,7 +191,6 @@
     .explorer-teaser > div > div:first-child h3 {
         top: 0;
         right: 0;
-        max-width: var(--spacing-xs);
         margin-right: 0;
         padding: var(--spacing-m);
     }
@@ -202,6 +205,12 @@
         margin: 0;
     }
 
+    .explorer-teaser > div > div:nth-child(2) p:nth-last-child(2),
+    .explorer-teaser > div > div:nth-child(2) p:last-child {
+        margin-top: var(--spacing-xs);
+        padding-right: var(--spacing-l);
+    }
+
     .explorer-teaser > div > div:nth-child(2) img {
         width: 100%;
     }
@@ -211,8 +220,8 @@
         padding: 0 var(--spacing-l);
     }
 
-    .explorer-teaser > div > div:nth-child(2) p:nth-last-child(2),
-    .explorer-teaser > div > div:nth-child(2) p:nth-last-child(4) {
+    .explorer-teaser > div > div:nth-child(2) p:nth-last-child(3),
+    .explorer-teaser > div > div:nth-child(2) p:nth-last-child(5) {
         border: none;
     }
 }
@@ -225,7 +234,7 @@
 
 @media (max-width: 1200px) {
     .explorer-teaser > div > div:nth-child(2) {
-        grid-template-columns: 37% 1fr;
+        grid-template-columns: 37% 63%;
         width: 455px;
     }
 
@@ -248,5 +257,11 @@
     .explorer-teaser > div > div:nth-child(2) {
         grid-template-columns: 60% 130%;
         width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .explorer-teaser > div > div:first-child h3 {
+        max-width: 535px;
     }
 }

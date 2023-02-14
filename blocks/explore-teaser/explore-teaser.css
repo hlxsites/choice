@@ -211,13 +211,13 @@
         margin-left: var(--spacing-s);
     }
 
-    .explore-teaser > div:nth-child(2) > div:nth-child(2) p:nth-last-child(2),
-    .explore-teaser > div:nth-child(2) > div:nth-child(2) p:nth-last-child(4) {
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) p:nth-last-child(3),
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) p:nth-last-child(5) {
         border: none;
     }
 
     .explore-teaser > div:nth-child(2) > div:nth-child(2) .button-container {
-        margin-top: 50px;
+        margin-top: var(--spacing-xs);
         text-align: right;
     }
 }
