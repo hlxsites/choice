@@ -17,10 +17,11 @@
 
 .deal.block > div:nth-child(1) > div img {
     height: 40px;
+    margin-right: 40px;
 }
 
-.deal.block > div:nth-child(1) > div img:first-of-type {
-    margin-right: 40px;
+.deal.block > div:nth-child(1) > div > p:last-of-type img {
+    margin-right: 0;
 }
 
 .deal.block div.button-container a {
