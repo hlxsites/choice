@@ -10,7 +10,7 @@
 
 .image-near-hotels-container h2 {
   font-size: var(--heading-font-size-l);
-  margin: 10px 0 30px 0;
+  margin: 10px 0 30px;
 }
 
 .image-near-hotels.block > div:nth-child(3) {
