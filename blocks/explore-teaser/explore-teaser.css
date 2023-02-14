@@ -1,15 +1,15 @@
 .explore-teaser-wrapper {
-    padding: 0 15px
+    padding: 0 var(--spacing-s)
 }
 
 .explore-teaser {
-    padding: 30px 30px 30px 0;
+    padding: var(--spacing-l) var(--spacing-l) var(--spacing-l) 0;
 }
 
 .explore-teaser > div:nth-child(2) h2 {
     font-size: var(--body-font-size-xl);
-    margin: 0;
-    padding: 0 20px 20px;
+    margin: 0 0 var(--spacing-xs);
+    padding: var(--spacing-m) var(--spacing-m) 0;
 }
 
 .explore-teaser > div:nth-child(2) h2 a,
@@ -26,17 +26,20 @@
     text-align: left;
     white-space: break-spaces;
     margin: 0;
-    padding: 0;
+    padding: var(--spacing-xs);
+    border-radius: 0;
 }
 
 .explore-teaser > div:nth-child(2) p {
     margin: 0;
-    padding: 0 20px 20px;
+    padding: 0 var(--spacing-m) var(--spacing-m);
+    line-height: var(--body-font-line-height);
 }
 
 .explore-teaser > div:nth-child(2) p:has(picture) {
     margin: 0;
     padding: 0;
+    line-height: 0;
 }
 
 .explore-teaser > div:nth-child(2) h2 a:hover,
@@ -54,7 +57,8 @@
     justify-content: flex-end;
     background-size: cover;
     background-position: 50% 50%;
-    margin-bottom: 30px;
+    margin-bottom: var(--spacing-l);
+    min-height: 300px;
 }
 
 .explore-teaser > div:nth-child(2) a.button {
@@ -101,9 +105,8 @@
 }
 
 .explore-teaser > div:first-child .button-container {
-    background: var(--background-color);
     margin: 40px 0;
-    padding: 10px;
+    padding: 0;
 }
 
 .explore-teaser > div:first-child .button-container a:hover {
@@ -127,15 +130,15 @@
 
 .explore-teaser > div:nth-child(2) > div:nth-child(2) p:has(picture) {
     grid-row: auto / span 2;
-    margin-left: 15px;
-    padding: 20px 15px;
+    margin-left: var(--spacing-s);
+    padding: var(--spacing-m) var(--spacing-s);
     border-top: 1px solid var(--border-color);
 }
 
 .explore-teaser > div:nth-child(2) > div:nth-child(2) h3 {
     font-size: 1.17em;
     border-top: 1px solid var(--border-color);
-    padding: 20px 15px;
+    padding: var(--spacing-m) var(--spacing-s);
     margin: 0;
 }
 
@@ -143,7 +146,7 @@
     grid-column: 2;
     margin-left: auto;
     padding-right: 0;
-    margin-right: -15px;
+    margin-right: var(--spacing-s);
     padding-bottom: 0;
 }
 
@@ -187,7 +190,7 @@
     }
 
     .explore-teaser > div:nth-child(2) > div:nth-child(2) p:has(picture) {
-        margin: 30px 0 0;
+        margin: var(--spacing-l) 0 0;
         padding: 0;
     }
 
@@ -197,12 +200,12 @@
 
     .explore-teaser > div:nth-child(2) > div:nth-child(2) h3 {
         border: none;
-        margin: 10px 0;
+        margin: var(--spacing-xs) 0;
         padding: 0;
     }
 
     .explore-teaser > div:first-child .button-container {
-        margin-left: 15px;
+        margin-left: var(--spacing-s);
     }
 
     .explore-teaser > div:nth-child(2) > div:nth-child(2) p:nth-last-child(2),

@@ -105,6 +105,7 @@
 
   /* spacing */
   --spacing-mini: 8px;
+  --spacing-xs: 10px;
   --spacing-s: 15px;
   --spacing-xm: 16px;
   --spacing-m: 20px;
