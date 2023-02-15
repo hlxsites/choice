@@ -1,0 +1,223 @@
+.explore-teaser-wrapper {
+    padding: 0 var(--spacing-s);
+    clear: left;
+}
+
+.explore-teaser {
+    padding: var(--spacing-l) 0 var(--spacing-l) 0;
+}
+
+.explore-teaser > div:nth-child(2) h2 {
+    font-size: var(--body-font-size-xl);
+    margin: 0 0 var(--spacing-xs);
+    padding: var(--spacing-m) var(--spacing-m) 0;
+}
+
+.explore-teaser > div:nth-child(2) h2 a,
+.explore-teaser > div:nth-child(2) h3 a {
+    color: var(--link-color-secondary);
+    text-decoration: none;
+}
+
+.explore-teaser > div:first-child .button-container a {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--body-font-size-xxl);
+    line-height: var(--font-line-height);
+    background: var(--background-color);
+    color: var(--link-color);
+    text-align: left;
+    white-space: break-spaces;
+    margin: 0;
+    padding: var(--spacing-xs);
+    border-radius: 0;
+}
+
+.explore-teaser > div:nth-child(2) p {
+    margin: 0;
+    padding: 0 var(--spacing-m) var(--spacing-m);
+    line-height: var(--body-font-line-height);
+}
+
+.explore-teaser > div:nth-child(2) p:has(picture) {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.explore-teaser > div:nth-child(2) h2 a:hover,
+.explore-teaser > div:nth-child(2) h3 a:hover {
+    color: var(--icon-link-hover);
+    text-decoration: underline;
+}
+
+.explore-teaser > div:nth-child(2) {
+    display: flex;
+    align-items: flex-start;
+}
+
+.explore-teaser > div:first-child > div:first-child {
+    display: flex;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: var(--spacing-l);
+    min-height: 300px;
+}
+
+.explore-teaser > div:nth-child(2) a.button {
+    font-weight: var(--font-weight-heavy);
+    text-decoration: underline;
+    text-transform: uppercase;
+    background-color: var(--background-color);
+    border: 1px solid var(--link-highlight-color);
+    border-radius: 0;
+    color: var(--link-highlight-color);
+    padding-bottom: var(--spacing-s);
+    padding-top: var(--spacing-s);
+    margin-bottom: 0;
+}
+
+.explore-teaser > div:nth-child(2) a.button:hover {
+    color: var(--background-color);
+    background-color: var(--link-highlight-color);
+}
+
+.explore-teaser > div:nth-child(2) p:last-child a.button {
+    border: none;
+    text-transform: none;
+    color: var(--link-color-secondary);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+    padding: 0;
+}
+
+.explore-teaser > div:nth-child(2) p:last-child a.button::after {
+    font-family: chFont, sans-serif;
+    font-size: .8em;
+    content: " \E816";
+}
+
+.explore-teaser > div:nth-child(2) p:last-child a.button:hover {
+    background: none;
+    color: var(--link-color);
+}
+
+.explore-teaser > div:nth-child(2) > div:first-child {
+    border: 1px solid var(--border-color);
+    width: 66%;
+}
+
+.explore-teaser > div:first-child .button-container {
+    margin: 40px 0;
+    padding: 0;
+}
+
+.explore-teaser > div:first-child .button-container a:hover {
+    text-decoration: underline;
+}
+
+.explore-teaser > div:first-child img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.explore-teaser > div:nth-child(2) > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 1.9fr;
+}
+
+.explore-teaser > div:nth-child(2) > div:nth-child(2) p {
+    line-height: var(--body-font-line-height);
+}
+
+.explore-teaser > div:nth-child(2) > div:nth-child(2) p:has(picture) {
+    grid-row: auto / span 2;
+    margin-left: var(--spacing-s);
+    padding: var(--spacing-m) var(--spacing-s);
+    border-top: 1px solid var(--border-color);
+}
+
+.explore-teaser > div:nth-child(2) > div:nth-child(2) h3 {
+    font-size: 1.17em;
+    border-top: 1px solid var(--border-color);
+    padding: var(--spacing-m) var(--spacing-s);
+    margin: 0;
+}
+
+.explore-teaser > div:nth-child(2) > div:nth-child(2) .button-container {
+    grid-column: 2;
+    margin-left: auto;
+    padding-right: 0;
+    margin-right: var(--spacing-s);
+    padding-bottom: 0;
+}
+
+.explore-teaser > div:nth-child(2) > div:nth-child(2) p:nth-last-child(3),
+.explore-teaser > div:nth-child(2) > div:nth-child(2) p:nth-last-child(5) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+@media (min-width: 768px) {
+    .explore-teaser > div:first-child .button-container {
+        width: 41.6667%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .explore-teaser > div:nth-child(2) > div:first-child {
+        width: 80%;
+    }
+
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) {
+        grid-template-columns: 1fr 1.8fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-teaser > div:nth-child(2) {
+        display: block;
+    }
+
+    .explore-teaser > div:nth-child(2) > div:first-child,
+    .explore-teaser > div:nth-child(2) > div:first-child img {
+        width: 100%;
+    }
+
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) {
+        display: block;
+    }
+
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) p{
+        padding: 0;
+    }
+
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) p:has(picture) {
+        margin: var(--spacing-l) 0 0;
+        padding: 0;
+    }
+
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) img {
+        width: 100%;
+    }
+
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) h3 {
+        border: none;
+        margin: var(--spacing-xs) 0;
+        padding: 0;
+    }
+
+    .explore-teaser > div:first-child .button-container {
+        margin-left: var(--spacing-s);
+    }
+
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) p:nth-last-child(3),
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) p:nth-last-child(5) {
+        border: none;
+    }
+
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) .button-container {
+        margin-top: var(--spacing-xs);
+        text-align: right;
+    }
+}
