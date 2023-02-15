@@ -8,7 +8,11 @@
   position: relative;
 }
 
-.image-near-hotels.block > div:nth-child(3) {
+.image-near-hotels-container h2 {
+  margin: var(--spacing-l) 0 var(--spacing-l);
+}
+
+.image-near-hotels.block > div:nth-child(2) {
   color: var(--article-teaser-side-text);
   font-size: var(--font-size-medium);
   letter-spacing: 0;
@@ -16,7 +20,7 @@
   line-height: 27px;
 }
 
-.image-near-hotels.block > div:nth-child(3) > div {
+.image-near-hotels.block > div:nth-child(2) > div {
   border-top: 1px solid;
   border-color: var(--article-teaser-border);
   padding-top: var(--spacing-l);
@@ -27,9 +31,9 @@
   display: table;
 }
 
-.ch-icon-map-marker::before {
+.image-near-hotels.block > div:nth-child(2) >div::before {
   font-family: chFont, sans-serif;
-  content: '';
+  content: '\00a0\00a0';
   font-style: normal;
   font-weight: var(--font-weight-normal);
   position: relative;
@@ -43,7 +47,7 @@
   font-size: 10px;
 }
 
-main .text-in-image a{
+main .image-near-hotels.block > div > div .button-container a{
   font-size: var(--body-font-size-xs);
   text-align: right;
   font-family: var(--body-font-family);
@@ -59,13 +63,13 @@ main .text-in-image a{
   z-index: 1;
 }
 
-main .text-in-image a:hover{
+main .image-near-hotels.block > div > div .button-container a:hover{
   background-color: transparent;
   text-decoration: underline;
   color: var(--link-color);
 }
 
-.text-in-image {
+.image-near-hotels.block > div > div .button-container {
   bottom: 0;
   left: auto;
   padding: 0.2em 0.1em;
@@ -76,21 +80,33 @@ main .text-in-image a:hover{
   z-index: 1;
   color: var(--background-color);
   background-color: transparent;
+  margin: 0;
 }
 
-.text-in-image::after {
+.image-near-hotels.block > div > div .button-container a::after {
+  font-family: chFont, sans-serif;
+  content: '';
+  padding-right: 4px;
+  font-size: 10px;
+}
+
+.image-near-hotels.block > div > div .button-container::after {
   content: '';
   display: block;
-  height: 100px;
-  margin-top: -100px;
+  height: 10px;
+  margin-top: -10px;
   position: relative;
+}
+
+.image-near-hotels.block > div > div p{
+  margin-top: 0;  
 }
 
 .image-near-hotels.block > div:nth-child(1) > div:nth-child(1)::after {
   content: '';
   display: block;
   height: 100px;
-  margin-top: -100px;
+  margin-top: -120px;
   position: relative;
   background: rgba(255 255 255 / 0%);
   background: linear-gradient(to top, rgba(255 255 255 / 0%) 0%, #000 100%);
@@ -103,7 +119,7 @@ main .text-in-image a:hover{
     padding-right: 15px;
   }
 
-  .image-near-hotels.block > div:nth-child(3) {
+  .image-near-hotels.block > div:nth-child(2) {
     width: 25%;
     padding-left: 15px;
     padding-right: 15px;
