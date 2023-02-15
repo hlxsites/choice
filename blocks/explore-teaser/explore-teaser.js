@@ -7,7 +7,9 @@ export default function decorate(block) {
   container.style.backgroundImage = `url(${imageSrc})`;
   picturePara.remove();
 
-  const backToTop = block.querySelector('.explore-teaser > div:nth-child(2) p:last-child a.button ');
+  const backToTop = block.querySelector(
+    '.explore-teaser > div:nth-child(2) p:last-child a.button '
+  );
   if (backToTop.href.includes('#top')) {
     backToTop.href = '#top';
   }

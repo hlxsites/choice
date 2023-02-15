@@ -13,8 +13,10 @@ function createImageTeaser(block) {
   arrowRight.innerHTML = '&nbsp;';
 
   const textWithArrow = divForLink.innerHTML.trim();
-  const linkWithArrow = textWithArrow.slice(0, (textWithArrow.length) - 4)
-  + arrowRight.outerHTML + textWithArrow.slice((textWithArrow.length) - 4);
+  const linkWithArrow =
+    textWithArrow.slice(0, textWithArrow.length - 4) +
+    arrowRight.outerHTML +
+    textWithArrow.slice(textWithArrow.length - 4);
   divForLink.innerHTML = linkWithArrow;
   const picture = block.querySelectorAll('.image-near-hotels > div > div');
   picture[0].appendChild(divForLink);
@@ -24,7 +26,8 @@ function createImageTeaser(block) {
   mapMarker.innerHTML = '&nbsp;&nbsp;';
 
   const textAside = rows[2].innerHTML.trim();
-  const divWithSpan = textAside.slice(0, 5) + mapMarker.outerHTML + textAside.slice(5);
+  const divWithSpan =
+    textAside.slice(0, 5) + mapMarker.outerHTML + textAside.slice(5);
   rows[2].innerHTML = divWithSpan;
 }
 

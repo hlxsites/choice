@@ -2,7 +2,8 @@
     position: relative;
 }
 
-.section.hero-container, .hero.block picture:nth-child(1) img {
+.section.hero-container,
+.hero.block picture:nth-child(1) img {
     height: 640px;
 }
 
@@ -26,7 +27,8 @@
     margin-top: 30px;
 }
 
-body.explore .section.hero-container, body.explore .hero.block picture:nth-child(1) img {
+body.explore .section.hero-container,
+body.explore .hero.block picture:nth-child(1) img {
     height: 428px;
 }
 
@@ -41,7 +43,8 @@ body.explore .hero.block > div > div {
     text-align: center;
 }
 
-.hero.block h1, .hero.block h2 {
+.hero.block h1,
+.hero.block h2 {
     position: relative;
     font-family: var(--heading-font-family);
     font-size: var(--heading-font-size-2xl);
@@ -68,7 +71,8 @@ body.explore .hero.block h2 {
 }
 
 @media (min-width: 543px) {
-    .section.hero-container, .hero.block picture:nth-child(1) img {
+    .section.hero-container,
+    .hero.block picture:nth-child(1) img {
         height: 535px;
     }
 
@@ -78,13 +82,15 @@ body.explore .hero.block h2 {
 }
 
 @media (min-width: 652px) {
-    .section.hero-container, .hero.block picture:nth-child(1) img {
+    .section.hero-container,
+    .hero.block picture:nth-child(1) img {
         height: 425px;
     }
 }
 
 @media (min-width: 768px) {
-    .section.hero-container, .hero.block picture:nth-child(1) img {
+    .section.hero-container,
+    .hero.block picture:nth-child(1) img {
         height: 750px;
     }
 
@@ -95,19 +101,23 @@ body.explore .hero.block h2 {
 }
 
 @media (min-width: 992px) {
-    .section.hero-container, .hero.block picture:nth-child(1) img {
+    .section.hero-container,
+    .hero.block picture:nth-child(1) img {
         height: 625px;
     }
 
-    body.explore .section.hero-container, body.explore .hero.block picture:nth-child(1) img {
+    body.explore .section.hero-container,
+    body.explore .hero.block picture:nth-child(1) img {
         height: 395px;
     }
 
-    .hero.block h1, .hero.block h2 {
+    .hero.block h1,
+    .hero.block h2 {
         width: 75%;
     }
 
-    body.explore .hero.block h1, body.explore .hero.block h2 {
+    body.explore .hero.block h1,
+    body.explore .hero.block h2 {
         width: 100%;
     }
 }

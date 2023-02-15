@@ -93,7 +93,7 @@
 
 .explore-teaser > div:nth-child(2) p:last-child a.button::after {
     font-family: chFont, sans-serif;
-    font-size: .8em;
+    font-size: 0.8em;
     content: " \E816";
 }
 
@@ -188,7 +188,7 @@
         display: block;
     }
 
-    .explore-teaser > div:nth-child(2) > div:nth-child(2) p{
+    .explore-teaser > div:nth-child(2) > div:nth-child(2) p {
         padding: 0;
     }
 

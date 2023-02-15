@@ -1,0 +1,19 @@
+{
+  "bracketSpacing": true,
+  "overrides": [
+    {
+      "files": ["blocks/**/*.js", "scripts/*.js"],
+      "options": {
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "es5"
+      }
+    },
+    {
+      "files": ["blocks/**/*.css", "styles/*.css"],
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
+}
