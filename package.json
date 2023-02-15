@@ -11,7 +11,7 @@
     "prettier:check": "npm run prettier:css:check && npm run prettier:js:check",
     "lint:js": "eslint .",
     "lint:css": "stylelint 'blocks/**/*.css' 'styles/*.css'",
-    "lint": "npm run lint:js && npm run lint:css"
+    "lint": "npm run lint:js && npm run lint:css && npm run prettier:check"
   },
   "repository": {
     "type": "git",

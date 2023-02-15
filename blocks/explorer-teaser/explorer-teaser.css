@@ -5,7 +5,7 @@
 }
 
 .explorer-teaser-wrapper {
-    max-width: 100%!important;
+    max-width: 100% !important;
 }
 
 .section.explorer-teaser-container .default-content-wrapper {
@@ -82,7 +82,8 @@
     white-space: break-spaces;
     text-align: right;
     max-width: 475px;
-    padding: var(--spacing-xs) var(--spacing-m) var(--spacing-xs) var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-m) var(--spacing-xs)
+        var(--spacing-xs);
     margin-right: var(--spacing-s);
     margin-top: 80px;
     margin-left: var(--spacing-l);
@@ -140,7 +141,7 @@
 
 .explorer-teaser > div > div:nth-child(2) p:last-child a.button::after {
     font-family: chFont, sans-serif;
-    font-size: .8em;
+    font-size: 0.8em;
     content: " \E816";
 }
 
